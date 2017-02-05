@@ -1,0 +1,42 @@
+Instructions for running server
+
+go run server.go
+
+Instructions for  client
+
+go run sync-client.go
+go run async.go
+
+python version used 3.4
+requires packages requests, json
+python client is not functioning correctly 
+
+EXCEPTION
+Upon error (UnknownWord or AlreadyExists) the client program terminates. The code has been checked for excpetions but for the sake of complete execution the exception parts have been commented out
+
+EXPECTED OUTPUT SYNC-CLIENT
+
+Success InsertWord
+Success InsertWord
+Success LookUpWord
+Key:  Barney Meaning:  Awesome Pos:  0
+Synonyms: 
+Success InsertWord
+Success LookUpWord
+Key:  Robin Meaning:  Daring Pos:  2
+Synonyms: Barney Ted 
+Success Removeword
+Success LookUpWord
+Key:  Robin Meaning:  Daring Pos:  2
+Synonyms: Ted 
+Success LookUpWord
+Key:  Ted Meaning:  Sweet Pos:  0
+Synonyms: 
+Success Removeword
+Success Removeword
+
+EXPECTED OUTPUT ASYNC-CLIENT
+
+Similar to sync except that every success line has a lot of
+"Palak Jain  130050031" between them. To display the async nature.
+
